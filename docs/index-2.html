@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<META name="generator" content="HTML Tidy, see www.w3.org">
+<TITLE>MyAddressbook Manual: Installation</TITLE>
+<META http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<STYLE type="text/css">
+body { background: #ffffff}
+a:link { color: #aa0000}
+i, p, blockquote, ul li, ul, dl {font-family: Lucida, Verdana, Helvetica, Arial; font-size: 10pt; color: #000000}
+</STYLE>
+<STYLE type="text/css">
+ p.cr {text-align: right}
+ hr.c {text-align: center}
+ p.b {font-weight: bold}
+</STYLE>
+</HEAD>
+
+<BODY>
+<HR width="100%" size="2" noshade class="c">
+
+<P><A href="index-3.html">Next</A> <A href="index-1.html">Previous</A> <A href="index.html#toc3">Table of Contents</A></P>
+<H1><A name="s3">2. Installation</A></H1>
+<H3><A name="ss2.1">2.1 Where to get MyAddressbook</A></H3>
+<P>MyAddressbook can be downloaded from:</P>
+<UL>
+<LI><A href="http://rootus.org/src.php">http://rootus.org/src.php</A> - as a gzipped source-tarball</LI>
+</UL>
+</p>
+<H3><A name="ss2.2">2.2 Requirements</A></H3>
+<P>
+For MyAddressbook to work you need web server with PHP enabled and MySQL database.<BR>
+</P>
+<P class="b">Required:</P>
+<UL>
+<LI>MySQL <A href="http://www.mysql.com">http://www.mysql.com</A></LI>
+<LI>PHP <A href="http://www.php.net">http://www.php.net</A></LI>
+</UL>
+</P>
+<H3><A name="ss2.3">2.3 Installation</A></H3>
+<H4><A name="ss2.3.1">2.3.1 Linux</A></H4>
+<P>Go to the web server folder and unpack the tar.gz file there.</P>
+<BLOCKQUOTE>
+$ cd /var/www/html/<br>
+$ tar xfvz MyAddressbook_1.1.0.tar.gz<br>
+</BLOCKQUOTE>
+<P>This will create an folder called "addressbook".</P>
+<P>Go to the "docs" folder where the Database layout file is</P>
+<BLOCKQUOTE>
+$ cd addressbook/docs<br>
+</BLOCKQUOTE>
+<p>Create an empty database called MyAddressbook.</P>
+<BLOCKQUOTE>
+$ mysqladmin -u username -ppassword create MyAddressbook
+</BLOCKQUOTE>
+<P>Create the database tables using the "MyAddressbook.sql"</P>
+<BLOCKQUOTE>
+$ mysql -u username -ppassword MyAddressbook < MyAddressbook.sql
+</BLOCKQUOTE>
+<P>Edit the file "db_config.php" to set database<BR>
+variables (hostname , username , password)</P>
+
+<H4><A name="ss2.3.2">2.3.2 Windows</A></H4>
+<P>
+Using winzip or something similar unpack the tar.gz file to the WWW folder.</P>
+<P>In this example I had the WWW document root in "D:\www\Apache2\htdocs"<BR>
+and MySQL was installed at "d:\www\mysql"
+</P>
+<BLOCKQUOTE>
+D:\>cd www\Apache2\htdocs<BR>
+D:\www\Apache2\htdocs>cd addressbook<BR>
+D:\www\Apache2\htdocs\addressbook>d:\www\mysql\bin\mysqladmin.exe create<BR>
+MyAddressbook<BR>
+D:\www\Apache2\htdocs\addressbook>cd docs<BR>
+D:\www\Apache2\htdocs\addressbook\docs>d:\www\mysql\bin\mysql -u username<BR>
+-ppassword MyAddressbook < MyAddressbook.sql<BR>
+</BLOCKQUOTE>
+<P>Using Notapade I then edit the file "db_config.php" to set database<BR>
+variables (hostname , username , password)</P>
+<P>
+That's it...now you should be able to launch you web browser and start using<BR>
+this addressbook.</P>
+<H3><A name="ss2.4">2.4 Upgrade</A></H3>
+<P>
+To upgrade from 0.7 and older you need to add the config database table.<BR>
+This table can be found in the "docs" directory.</P>
+<P>Earlier versions you only need to overwrite all the .php files,<BR>
+the database layout has not changed so there are no more steps required.</P>
+
+<P><A href="index-3.html">Next</A> <A href="index-1.html">Previous</A> <A href="index.html#toc3">Table of Contents</A></P>
+<HR width="100%" size="3" noshade class="c">
+</BODY>
+</HTML>
+

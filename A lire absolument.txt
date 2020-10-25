@@ -1,0 +1,8 @@
+Bonjour
+
+Pour que ce modules fonctionne , il vous faut editer le fichier db_config.php , la remplissez les vides
+
+SUr le lignes : $db_table = "xoops_xoopsbook_olafur"; et $db_table_config = "xoops_xoopsbook_config"; , ne rien cha	nger sauf si vous avez mis nom different pour le prefixe des tables (xoops étant le nom crée par defaut)
+
+@+
+Krakite

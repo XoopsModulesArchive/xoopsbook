@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<HTML>
+<HEAD>
+<META name="generator" content="HTML Tidy, see www.w3.org">
+<TITLE>MyAddressbook Manual: Changelog</TITLE>
+<META http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<STYLE type="text/css">
+body { background: #ffffff}
+a:link { color: #aa0000}
+i, p, blockquote, ul li, ul, dl {font-family: Lucida, Verdana, Helvetica, Arial; font-size: 10pt; color: #000000}
+</STYLE>
+<STYLE type="text/css">
+ p.cr {text-align: right}
+ hr.c {text-align: center}
+</STYLE>
+</HEAD>
+
+<BODY>
+<HR width="100%" size="2" noshade class="c6">
+
+<P>Next <A href="index-4.html">Previous</A> <A href="index.html#toc3">Table of Contents</A></P>
+<H1><A name="s3">5. Changelog</A></H1>
+
+<H3>1.1.1</H3>
+<UL>
+<LI>Updated Dutch language file from Peter Smessaert</LI>
+<LI>Added Brazilian Portuguese lanuage file from Rogerio Acquadro</LI>
+<LI>Fixed bug that did not allow underscore or minus in E-Mail addresses.</LI>
+<LI>Added Windows installation to the Manual.</LI>
+<LI>Some minor fixes.</LI>
+</UL>
+
+<H3>1.1.0</H3>
+<UL>
+<LI>Auto set focus on the Search box.</LI>
+<LI>Added French translation by bruno@peronne.org.</LI>
+<LI>Fixed bugs regarding missing DB variables, if used different database table<BR>
+names Admin page did not work.</LI>
+</UL>
+
+<H3>1.0.9</H3>
+<UL>
+<LI>Some HTML fixes.</LI>
+<LI>Updated the Manual.</LI>
+<LI>Added mapquest.com support.</LI>
+</UL>
+
+<H3>1.0.8</H3>
+<UL>
+<LI>Added Swedish translation.</LI>
+<LI>Save directly in Outlook as vCard, using PHP class by kaib@bitfolge.de.</LI>
+<LI>Export now sends the file for Mozilla and OE to your computer, makes<BR>
+things a lot simpler.</LI>
+<LI>Some addins for the Report Generator.</LI>
+<LI>Started to write this Manual</LI>
+<LI>Minor layout fixes.</LI>
+</UL>
+
+<H3>1.0.7</H3>
+<UL>
+<LI>Cleanup, now all variables you need to change are in db_config.php file.</LI>
+<LI>Renamed some files to make more sense.</LI>
+<LI>Added option to hide "Add New" and disable "Delete" and "Update", set in<BR>
+the Admin page (Read-Only Mode).</LI>
+<LI>Lots of small bugfixes...eg. language files updates, missing tags fixes....</LI>
+</UL>
+
+<H3>1.0.6</H3>
+<UL>
+<LI>Added Report Generator, where you can print out the entire addressbook<BR>
+using selected fields.</LI> 
+</UL>
+
+<H3>1.0.5</H3>
+<UL>
+<LI>Moved the language select to the index page, should not have to login to<BR>
+change it</LI>
+<LI>Some small fixes for the language change</LI>
+</UL>
+
+<H3>1.0.4</H3>
+<UL>
+<LI>Added German translation from Jens (jens@woodpeckerzone.de).</LI>
+<LI>Fixed the "Change Language" mess, dropped all these silly symlinks and now<BR>
+it is simply session based.</LI>
+<LI>E-Mail address validation.</LI>
+</UL>
+
+<H3>1.0.3</H3>
+<UL>
+<LI>MyAddressbook will now work with "register_globals = Off" in php.ini</LI>
+</UL>
+
+<H3>1.0.2</H3>
+<UL>
+<LI>Changed the Admin page...alot easier to navigate now.</LI>
+<LI>Started work on the Import function, but as mysql "load data infile" is no<BR>
+longer an option it could get messy.</LI>
+<LI>Dropped all the icon theme stuff....was fun to make but it doesnt make any<BR>
+sense.</LI>
+<LI>Deleted print.php....its now a function, dont need a page for that.</LI>
+<LI>Extended the setup.sh script to create and import the initial database, if<BR>
+wanted.</LI>
+</UL>
+
+<H3>1.0.1</H3>
+<UL>
+<LI>Added Export feature, saves the database as an text file that can be<BR>
+Imported to either Mozilla or Outlook Express.</LI>
+<LI>Several bugs reported by Peter Smessaert fixed (I hope).</LI>
+<LI>Added a REALLY basic password protection on the Admin page, just trying to<BR>
+keep this simple.</LI>
+<LI>Added a check for the language file, forgot that the last time and I guess<BR>
+everybody had problems woth that version.</LI>
+<LI>Updated the README file.</LI>
+</UL>
+
+<H3>1.0.0</H3>
+<UL>
+<LI>Clean up, clean up and more clean up.</LI>
+<LI>Fixed fonts to look better in Mozilla under Linux.</LI>
+</UL>
+
+<H3>0.9</H3>
+<UL>
+<LI>Added "Order by" Name, Address or E-Mail on listview.</LI>
+<LI>Added limit 15 on listview and "Next" to view more</LI>
+<LI>Added a "Print Preview".</LI>
+<LI>0.8 had the wrong .sql file to create new database, fixed.</LI>
+<LI>Few fixes on the table mess.</LI>
+</UL>
+
+<H3>0.8</H3>
+<UL>
+<LI>Added an Admin page, where you can change layout and colors.</LI>
+<LI>Changed the dbconnect function to have password by default, forgot it last<BR>
+time.</LI>
+<LI>Changed the Lang setup and added a easy way to change it via the new Admin<BR>
+page (mind you, I guess it only works in Linux).</LI>
+<LI>Added support for iconthemes, you can choose between GNOME and MS icons on<BR>
+the Admin page.</LI>
+<LI>Made a setup shellscript (UNIX only) to fix MySQL username and password.</LI>
+<LI>Minor fixes.</LI>
+</UL>
+
+<H3>0.7</H3>
+<UL>
+<LI>Added a Dutch translation from Peter Smessaert (Peter@Smessaert.be).</LI>
+<LI>Fixed a bug that made "Add new" not working after doing "Show all".</LI>
+<LI>Some minor fixes.</LI>
+</UL>
+
+<P>Next <A href="index-4.html">Previous</A> <A href="index.html#toc3">Table of Contents</A></P>
+<HR width="100%" size="3" noshade class="c6">
+</BODY>
+</HTML>
